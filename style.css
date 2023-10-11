@@ -5,18 +5,40 @@
 }
 .logo {
   color: #fff;
-  cursor: pointer;
-  position: relative;
-  /* font-family: ; */
+  cursor: pointer;  
+  position: relative;  
 }
+
 .logo::after {
   content: "";
-  width: 100%;
-  height: 2px;
+  width: 0;
+  height: 1px;
+  /* border-radius: 25px; */
+  /* padding: 0px 10px; */
   position: absolute;
-  background-color: yellow;
+  background-color: #f4bd09;
+  /* opacity: 0.75; */
   left: 0;
   bottom: -10px;
+  transition: 0.2s;
+  z-index: 1;
+}
+.logo:hover::after{
+  width: 100%;
+}
+.title {
+  background: transparent;
+  position: relative;
+  /* display: inline; */
+}
+.title span {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  background: #595;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 /* .logo::after */
 .main-container {
@@ -27,7 +49,6 @@
   background-size: cover;
   background-position: center;
 }
-
 .header {
   width: 85%;
   /* background-color: white; */
@@ -88,8 +109,68 @@
   font-size: 45px;
 }
 .content p {
-  font-size: 18px;
+  font-size: 21px;
   margin-top: 20px;
-  border-bottom: 2px solid blue;
-  padding-bottom: 20px;
 }
+.cta {
+  margin-top: 20px;
+}
+button {
+  width: 175px;
+  padding: 15px 0px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: transparent;
+  margin: 0px 20px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+
+  /* z-index: 10; */
+}
+span {
+  width: 0;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  transition: 0.5s;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+button:hover span {
+  width: 100%;
+}
+
+/* .cta-btns {
+  padding: 15px 30px;
+  border-radius: 25px;
+  width: 175px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;  
+  background: transparent ;
+  color: #fff;
+  cursor: pointer;
+  margin: 0px 10px;
+  overflow: hidden;
+  /* transition: 0.5s; */
+/* position: relative;
+}
+span {
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #333;
+  transition: 0.5s;
+  z-index: -1;
+}
+button:hover span {
+  background-color: #444;
+  width: 100%;
+  border: none;
+} */
